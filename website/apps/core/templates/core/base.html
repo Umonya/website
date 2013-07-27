@@ -1,0 +1,13 @@
+{% load staticfiles i18n %}
+
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+	<div id="header">{% block header %}{% include "core/includes/header.html" %}{% endblock %}</div>
+	<div id="nav">{% block nav %}{% include "core/includes/nav.html" %}{% endblock %}</div>
+	<div id="content">{% block content %}{% endblock %}</div>
+	<div id="footer">{% block footer %}{% include "core/includes/footer.html" %}{% endblock %}</div>
+</body>
+</html>

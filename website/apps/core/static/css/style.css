@@ -1,0 +1,27 @@
+body {
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	color: black;
+}
+
+#header, #nav, #footer {
+	color: white;
+}
+
+#header, #footer {
+	background-color: rgb(48, 48, 48);
+	padding: 32px 32px;
+}
+
+#nav {
+	background-color: rgb(32, 32, 32);
+	padding: 8px;
+}
+
+#nav ul {
+	text-align: center;
+}
+#nav li {
+	padding: 8px;
+	display: inline;
+	font-size: large;
+}

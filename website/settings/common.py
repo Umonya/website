@@ -118,6 +118,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'website.apps.core',
     'website.apps.posts',
     'ckeditor',
     'south',
