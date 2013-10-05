@@ -1,9 +1,11 @@
 {% extends "core/base.html" %}
 {% block content %}
-	<table>
+<div class="container">
+	<table class="table">
 		<tr><th>Title</th><th>Content</th><th>Created</th><th>Creator</th></tr>
 		{% for post in posts %}
 		<tr><td>{{ post.title }}</td><td>{{ post.content|truncatewords_html:10|safe }}</td><td>{{ post.created }}</td><td>{{ post.creator }}</td></tr>
 		{% endfor %}
 	</table>
+</div>
 {% endblock %}
