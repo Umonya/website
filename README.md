@@ -51,4 +51,4 @@ heroku open
 ```
 
 ### Setting `SECRET_KEY` ###
-You need to generate a random 50-character secret key to use for your Umonya deployment. After doing that, use it in production by setting an environment variable called `DJANGO_SECRET_KEY`. Step 5 above shows how to do it using the Heroku CLI. Do NOT use `SECRET_KEY` in https://github.com/Umonya/website/blob/develop/website/settings/dev.pyg since it is visible to the public. It it only there for dev convenience.
+You need to generate a random 50-character secret key to use for your Umonya deployment. After doing that, use it in production by setting an environment variable called `DJANGO_SECRET_KEY`. Step 5 above shows how to do it using the Heroku CLI. Do NOT use `SECRET_KEY` in https://github.com/Umonya/website/blob/develop/website/settings/dev.py since it is visible to the public. It it only there for dev convenience.
