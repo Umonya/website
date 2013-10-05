@@ -4,13 +4,8 @@ from django.utils import timezone
 
 from ckeditor.fields import RichTextField
 
-from website.apps.posts.managers import PostManager
-
 
 class Post(models.Model):
-
-    objects = PostManager()
-
     title = models.CharField(max_length=128)
     description = models.CharField(max_length=128, null=True, blank=True)
     content = RichTextField()
