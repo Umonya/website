@@ -1,10 +1,8 @@
-import sys
 import os
-from os import path
 import dj_database_url
 
 
-PROJECT_ROOT = path.dirname(path.abspath(sys.argv[0]))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -47,7 +45,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '%s/media/' % PROJECT_ROOT
+MEDIA_ROOT = '%s/media/' % BASE_DIR
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -58,11 +56,15 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = '%s/static/' % PROJECT_ROOT
+STATIC_ROOT = 'staticfiles'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -153,5 +155,7 @@ LOGGING = {
 }
 
 CKEDITOR_UPLOAD_PATH = "%s/uploads/" % MEDIA_ROOT
-if not path.exists(CKEDITOR_UPLOAD_PATH):
+if not os.path.exists(CKEDITOR_UPLOAD_PATH):
     os.makedirs(CKEDITOR_UPLOAD_PATH)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
