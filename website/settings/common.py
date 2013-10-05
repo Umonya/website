@@ -28,7 +28,20 @@ TIME_ZONE = 'UTC'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-uk'
+LANGUAGE_CODE = 'en-za'
+
+# Dummy gettext function - solution suggested by Django docs so that
+# makemessages command picks up the words
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('en-za', gettext('English')),
+    ('af', gettext('Afrikaans')),
+)
+
+LOCALE_PATHS = (
+    '%s/locale' % BASE_DIR,
+)
 
 SITE_ID = 1
 
@@ -86,6 +99,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

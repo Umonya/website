@@ -6,5 +6,5 @@ from website.apps.posts.models import Post
 
 def home(request):
     return render_to_response('core/home.html',
-                              {'posts': Post.objects.all()},
+                              {'posts': Post.objects.filter(published=True)},
                               RequestContext(request))
