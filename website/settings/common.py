@@ -7,13 +7,6 @@ BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Rizmari Versfeld', 'riz@umonya.com'),
-    ('Nina Schiff', 'nina@umonya.com'),
-)
-
-MANAGERS = ADMINS
-
 DATABASES = {'default': dj_database_url.config(default='sqlite:///umonya.db')}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -88,7 +81,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '75s03=t&pete(31c3v9mzco3f!mg8yah-prx3$#8rsdkva&vy('
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
