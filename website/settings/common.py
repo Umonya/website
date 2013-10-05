@@ -2,7 +2,7 @@ import os
 import dj_database_url
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -62,15 +62,9 @@ STATIC_ROOT = 'staticfiles'
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -114,8 +108,8 @@ INSTALLED_APPS = (
     'website.apps.core',
     'website.apps.posts',
     'ckeditor',
-    'south',
     'gunicorn',
+    'south',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -154,8 +148,23 @@ LOGGING = {
     }
 }
 
-CKEDITOR_UPLOAD_PATH = "%s/uploads/" % MEDIA_ROOT
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# CKEditor needs an existing local directory path. Otherwise
+# it complains on startup.
+CKEDITOR_UPLOAD_PATH = "%s/ckeditor_uploads/" % MEDIA_ROOT
 if not os.path.exists(CKEDITOR_UPLOAD_PATH):
     os.makedirs(CKEDITOR_UPLOAD_PATH)
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Turn off local file uploads and browsing. A user can
+# still insert an image by providing a url but we don't
+# want to store these images locally. django-ckeditor
+# does not use the Django file storage API. Thus it
+# cannot be used with something like django-storages.
+CKEDITOR_CONFIGS = {
+    'default': {
+        'filebrowserImageBrowseUrl': '',
+        'filebrowserImageUploadUrl': '',
+        'removePlugins': 'flash',
+    },
+}
