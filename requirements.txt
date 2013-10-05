@@ -1,0 +1,13 @@
+Django==1.5.4
+django-ckeditor==4.0.2
+django-toolbelt==0.0.1
+dj-database-url==0.2.2
+dj-static==0.0.5
+gunicorn==18.0
+mimeparse
+mock
+psycopg2==2.5.1
+pytz
+South==0.8.1
+static==0.4
+wsgiref==0.1.2

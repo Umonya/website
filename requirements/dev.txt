@@ -1,2 +1,0 @@
--r common.txt
-pysqlite==2.6.3
