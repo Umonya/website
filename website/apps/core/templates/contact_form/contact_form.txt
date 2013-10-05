@@ -1,0 +1,12 @@
+{% load i18n %}
+
+{% language LANGUAGE_CODE %}
+{% blocktrans %}
+Name: {{ name }}
+
+Email: {{ email }}
+
+Message:
+{{ body }}
+{% endblocktrans %}
+{% endlanguage %}

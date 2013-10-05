@@ -1,5 +1,7 @@
 Django==1.5.4
+django-contact-form==1.0
 django-ckeditor==4.0.2
+django-preferences==0.0.6
 django-toolbelt==0.0.1
 dj-database-url==0.2.2
 dj-static==0.0.5

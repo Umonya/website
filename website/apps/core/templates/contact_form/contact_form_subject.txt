@@ -1,0 +1,1 @@
+{% load i18n %}{% language LANGUAGE_CODE %}{% with site_name=site.name %}{% blocktrans %}{{ name }} sent a message from {{ site_name }}{% endblocktrans %}{% endwith %}{% endlanguage %}

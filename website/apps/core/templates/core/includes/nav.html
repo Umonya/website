@@ -1,8 +1,8 @@
 {% load i18n %}
 
 <ul>
-	<li><a href="/">{% trans "Home" %}</a></li>|
+	<li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>|
 	<li>{% trans "Course" %}</li>|
 	<li>{% trans "Gallery" %}</li>|
-	<li>{% trans "Contact us" %}</li>
+	<li><a href="{% url 'contact_form' %}">{% trans "Contact us" %}</a></li>
 </ul>

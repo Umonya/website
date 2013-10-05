@@ -1,0 +1,8 @@
+<div>
+	{% if field.is_hidden %}{{ field }}{% else %}
+	{% if field.field.required %}<label for="{{ field.auto_id }}">{{ field.label }} *</label>
+	{% else %}{{ field.label_tag }}{% endif %}
+	{{ field }}
+	{{ field.errors }}
+	{% endif %}
+</div>
