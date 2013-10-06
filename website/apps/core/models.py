@@ -30,5 +30,5 @@ class ContactPreferences(Preferences):
 
     @property
     def emails(self):
-        user_emails = [u.email for u in self.email_recipients.all()]
+        user_emails = list(self.email_recipients.values_list('email', flat=True))
         return user_emails + self.emails_from_raw
