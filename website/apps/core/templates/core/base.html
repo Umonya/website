@@ -4,6 +4,8 @@
 <head>
 	<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<link href="http{% if request.is_secure %}s{% endif %}://fonts.googleapis.com/css?family=Rationale" rel="stylesheet" type="text/css">
+	<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon">
 </head>
 <body>
 	<div id="header">{% block header %}{% include "core/includes/header.html" %}{% endblock %}</div>
