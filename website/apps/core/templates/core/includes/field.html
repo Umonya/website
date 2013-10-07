@@ -1,8 +1,19 @@
-<div>
-	{% if field.is_hidden %}{{ field }}{% else %}
-	{% if field.field.required %}<label for="{{ field.auto_id }}">{{ field.label }} *</label>
-	{% else %}{{ field.label_tag }}{% endif %}
-	{{ field }}
-	{{ field.errors }}
+{% load i18n %}
+{% if field.is_hidden %}{{ field }}{% else %}
+<div class="field">
+	{% if translate %}
+		{% if field.label %}
+		<label for="{{ field.auto_id }}">{% trans field.label %}{% if field.field.required %} *{% endif %}</label>
+		{% endif %}
+		{{ field }}
+		{% if field.help_text %}<div class="help-text">{% trans field.help_text %}</div>{% endif %}
+	{% else %}
+		{% if field.label %}
+		<label for="{{ field.auto_id }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+		{% endif %}
+		{{ field }}
+		{% if field.help_text %}<div class="help-text">{{ field.help_text }}</div>{% endif %}
 	{% endif %}
+	{{ field.errors }}
 </div>
+{% endif %}

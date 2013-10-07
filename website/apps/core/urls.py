@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 from django.views.generic import TemplateView
 
 from website.apps.core.forms import ContactForm
@@ -26,4 +26,5 @@ urlpatterns = patterns(
         ),
         name='contact_form_sent'
     ),
+    url(r'^forms/', include('forms_builder.forms.urls')),
 )

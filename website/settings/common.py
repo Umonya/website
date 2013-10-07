@@ -122,12 +122,14 @@ TEMPLATE_DIRS = (
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
+    'website.apps.core.context_processors.registration'
 )
 
 INSTALLED_APPS = (
     'website.apps.core',
     'website.apps.posts',
     'ckeditor',
+    'forms_builder.forms',
     'gunicorn',
     'preferences',
     'south',

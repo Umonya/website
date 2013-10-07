@@ -1,0 +1,13 @@
+{% load i18n %}
+<h1>{% trans form.title %}</h1>
+{% if form.intro %}
+<p>{% trans form.intro %}</p>
+{% endif %}
+<form action="{{ form.get_absolute_url }}" method="post"
+    {% if form_for_form.is_multipart %}enctype="multipart/form-data"{% endif %}>
+    {% csrf_token %}
+    {% for field in form_for_form %}
+        {% include "core/includes/field.html" with translate=True %}
+    {% endfor %}
+    <input type="submit" value="{% trans form.button_text %}">
+</form>

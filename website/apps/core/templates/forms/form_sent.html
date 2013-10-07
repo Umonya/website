@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% load forms_builder_tags i18n %}
+{% block content %}
+<div class="container">
+    <h1>{% trans form.title %}</h1>
+    {% if form.response %}
+    <p>{% trans form.response %}</p>
+    {% endif %}
+</div>
+{% endblock %}
