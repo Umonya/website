@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from preferences import preferences
 from preferences.models import Preferences
 from forms_builder.forms.models import Form, STATUS_PUBLISHED, STATUS_DRAFT
+from ckeditor.fields import RichTextField
 
 
 class ContactPreferences(Preferences):
@@ -35,6 +36,36 @@ class ContactPreferences(Preferences):
     def emails(self):
         user_emails = list(self.email_recipients.values_list('email', flat=True))
         return user_emails + self.emails_from_raw
+
+
+class GeneralPreferences(Preferences):
+    __module__ = 'preferences.models'
+    about_us = RichTextField(
+        null=True,
+        blank=True,
+        help_text="This content will appear on the 'About Us' page."
+    )
+    facebook_url = models.URLField(
+        null=True,
+        blank=True,
+        verbose_name='facebook URL',
+        help_text="Leave blank if you don't have a Facebook page."
+    )
+    google_plus_url = models.URLField(
+        null=True,
+        blank=True,
+        verbose_name='google+ URL',
+        help_text="Leave blank if you don't have a Google+ account."
+    )
+    twitter_url = models.URLField(
+        null=True,
+        blank=True,
+        verbose_name='twitter URL',
+        help_text="Leave blank if you don't have a Twitter account."
+    )
+
+    class Meta:
+        verbose_name_plural = 'general preferences'
 
 
 class StudentRegistrationPreferences(Preferences):
