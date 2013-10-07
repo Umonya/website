@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     'website.apps.core',
     'website.apps.posts',
     'ckeditor',
+    'forms_builder.forms',
     'gunicorn',
     'preferences',
     'south',
