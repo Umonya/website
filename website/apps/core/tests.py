@@ -1,5 +1,6 @@
 from django.contrib.sites.models import Site
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 
 from forms_builder.forms.models import Form, STATUS_PUBLISHED, STATUS_DRAFT
 
@@ -24,28 +25,49 @@ class RegistrationTestCase(TestCase):
         form = self.create_form(title='Foo')
         preferences = self.create_preferences(registration_form=form)
         # check that form is not published
-        self.assertFalse(Form.objects.published().filter(id=form.id).count())
+        self.assertFalse(Form.objects.published()
+                         .filter(id=form.id).count())
         # open registrations
         preferences.registration_status = 'open'
         preferences.save()
         # check that form is now published
-        self.assertEqual(Form.objects.published().filter(id=form.id).count(), 1)
+        self.assertEqual(Form.objects.published()
+                         .filter(id=form.id).count(), 1)
         # try to unpublish form and make sure it fails
         form.status = STATUS_DRAFT
         form.save()
-        self.assertEqual(Form.objects.get(id=form.id).status, STATUS_PUBLISHED)
+        self.assertEqual(Form.objects.get(id=form.id).status,
+                         STATUS_PUBLISHED)
+        # check that registration link is in navbar
+        # and that it returns 200
+        response = self.client.get(reverse('home'))
+        self.assertContains(response, form.get_absolute_url())
+        self.assertEqual(self.client.get(
+                         form.get_absolute_url()).status_code,
+                         200)
+
 
     def test_close_registration(self):
         form = self.create_form(title='Foo', status=STATUS_PUBLISHED)
         preferences = self.create_preferences()
         # check that form is published
-        self.assertEqual(Form.objects.published().filter(id=form.id).count(), 1)
+        self.assertEqual(Form.objects.published()
+                         .filter(id=form.id).count(), 1)
         # assign form to closed registrations
         preferences.registration_form = form
         preferences.save()
         # check that form is no longer published
-        self.assertFalse(Form.objects.published().filter(id=form.id).count())
+        self.assertFalse(Form.objects.published()
+                         .filter(id=form.id).count())
         # try to publish form and make sure it fails
         form.status = STATUS_PUBLISHED
         form.save()
-        self.assertEqual(Form.objects.get(id=form.id).status, STATUS_DRAFT)
+        self.assertEqual(Form.objects.get(id=form.id).status,
+                         STATUS_DRAFT)
+        # check that registration link is not in navbar
+        # and accessing form link returns 404
+        response = self.client.get(reverse('home'))
+        self.assertNotContains(response, form.get_absolute_url())
+        self.assertEqual(self.client.get(
+                         form.get_absolute_url()).status_code,
+                         404)
