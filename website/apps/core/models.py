@@ -68,6 +68,8 @@ def set_form_status(sender, **kwargs):
         if sender is StudentRegistrationPreferences:
             reg_prefs = kwargs['instance']
             form = reg_prefs.registration_form
+            if not form:
+                return
         else:
             reg_prefs = preferences.StudentRegistrationPreferences
             form = kwargs['instance']
