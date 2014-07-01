@@ -122,7 +122,8 @@ TEMPLATE_DIRS = (
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
-    'website.apps.core.context_processors.registration'
+    'website.apps.core.context_processors.registration',
+    'preferences.context_processors.preferences_cp'
 )
 
 INSTALLED_APPS = (

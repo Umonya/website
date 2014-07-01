@@ -16,6 +16,7 @@ def form_is_published(form):
         return False
     return True
 
+
 def registration(request):
     try:
         reg_prefs = preferences.StudentRegistrationPreferences

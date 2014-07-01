@@ -5,8 +5,15 @@
 		<a href="{% url 'home' %}"><img alt="Umonya logo" src="{% static 'images/logo.png' %}" /></a>
 	</div>
 	<div class="social">
-		<a href="http://twitter.com/projectumonya"><img alt="Umonya on Twitter" src="{% static 'images/twitter-logo.png' %}" /></a>
-		<a href="http://www.facebook.com/projectumonya"><img alt="Umonya on Facebook" src="{% static 'images/facebook-logo.png' %}" /></a>
-		<a href="https://plus.google.com/108023234245317429003"><img alt="Umonya on Google Plus" src="{% static 'images/google-logo.png' %}" /></a>
+		{% spaceless %}
+		{% with prefs=preferences.GeneralPreferences %}
+		{% if prefs.twitter_url %}
+		<a href="{{ prefs.twitter_url }}"><img alt="Umonya on Twitter" src="{% static 'images/twitter-logo.png' %}" /></a>{% endif %}
+		{% if prefs.facebook_url %}
+		<a href="{{ prefs.facebook_url }}"><img alt="Umonya on Facebook" src="{% static 'images/facebook-logo.png' %}" /></a>{% endif %}
+		{% if prefs.google_plus_url %}
+		<a href="{{ prefs.google_plus_url }}"><img alt="Umonya on Google Plus" src="{% static 'images/google-logo.png' %}" /></a>{% endif %}
+		{% endwith %}
+		{% endspaceless %}
 	</div>
 </div>
