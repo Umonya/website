@@ -33,13 +33,24 @@ h1,h2,h3,h4,h5,h6 {
 #nav li {
 	font-size: large;
 }*/
+#header {
+	padding: 40px 0 29px;
+}
 
 .dark {
 	background-color: rgb(48, 48, 48);
-	color: #fff;
+	color: rgb(119, 119, 119);
 }
+
+.social { padding-top: 29px; }
+
+.navbar { border-radius: 0; }
+
+.panel-footer { border-radius: 0; }
 
 @media (min-width: 768px) {
 	.navbar-inverse .nav-tabs.nav-justified > li > a,
 	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
+	.social { float: right!important; height: 106px; padding-top: 50px; }
+	.logo { float: left!important; }
 }
