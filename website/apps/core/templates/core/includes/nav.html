@@ -1,15 +1,15 @@
-{% load i18n %}
+{% load i18n umonyautils %}
 
 <div class="navbar navbar-default ">
 	<div class="container">
 		<div class="navbar-collapse collapse">
-			<ul class="nav nav-justified">
-				<li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
-				{% if REGISTRATION_OPEN %}<li><a href="{{ REGISTRATION_FORM.get_absolute_url }}">{% trans "Register" %}</a></li>{% endif %}
-				<li><a href="{% url 'about-us' %}">{% trans "About Us" %}</a></li>
-				<li><a>{% trans "Course" %}</a></li>
-				<li><a>{% trans "Gallery" %}</a></li>
-				<li><a href="{% url 'contact_form' %}">{% trans "Contact us" %}</a></li>
+			<ul class="nav nav-tabs">
+				<li class="{% active_path_class 'home' %}"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+				{% if REGISTRATION_OPEN %}<li class="{% if REGISTRATION_FORM.get_absolute_url == request.path_info %}active{% endif %}"><a href="{{ REGISTRATION_FORM.get_absolute_url }}">{% trans "Register" %}</a></li>{% endif %}
+				<li class="{% active_path_class 'about-us' %}"><a href="{% url 'about-us' %}">{% trans "About Us" %}</a></li>
+				<li class="disabled"><a>{% trans "Course" %}</a></li>
+				<li class="disabled"><a>{% trans "Gallery" %}</a></li>
+				<li class="{% active_path_class 'contact_form' %}"><a href="{% url 'contact_form' %}">{% trans "Contact us" %}</a></li>
 			</ul>
 		</div>
 	</div>
