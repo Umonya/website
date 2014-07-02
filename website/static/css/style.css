@@ -1,4 +1,4 @@
-body {
+/*body {
 	font: normal 13px/1.8em Arial, Helvetica, sans-serif;
 	color: #333;
 }
@@ -32,4 +32,14 @@ h1,h2,h3,h4,h5,h6 {
 
 #nav li {
 	font-size: large;
+}*/
+
+.dark {
+	background-color: rgb(48, 48, 48);
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.navbar-inverse .nav-tabs.nav-justified > li > a,
+	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
 }
