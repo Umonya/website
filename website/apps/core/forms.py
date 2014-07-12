@@ -4,6 +4,13 @@ from preferences import preferences
 
 class ContactForm(BaseContactForm):
 
+    def __init__(self, *args, **kwargs):
+        super(ContactForm, self).__init__(*args, **kwargs)
+        # add html5 required attribute
+        for field in self.fields.values():
+            if field.required:
+                field.widget.attrs['required'] = ''
+
     def save(self, fail_silently=False):
         """
         Override so that we can get recipients list from

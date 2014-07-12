@@ -37,6 +37,8 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 40px 0 29px;
 }
 
+#content { margin-bottom: 20px; }
+
 .dark {
 	background-color: rgb(48, 48, 48);
 	color: rgb(119, 119, 119);
@@ -48,9 +50,28 @@ h1,h2,h3,h4,h5,h6 {
 
 .panel-footer { border-radius: 0; }
 
+/* Forms */
+.field, .btn-group-lg { margin-bottom: 16px; width: 100%; }
+.btn-group-lg .btn { min-width: 256px; margin: 16px auto; }
+.field .help-text { font-style: italic; color: #777; font-size: small; }
+form { margin: 32px auto; }
+.booleanfield.form-control { width: 24px; height: 24px; margin: 5px 0; }
+.input-group-addon {
+	font-weight: bold;
+	color: rgb(51, 51, 51);
+	background-color: #fff;
+	display: inline-block;
+	line-height: inherit;
+	width: auto;
+	border: none;
+}
+
 @media (min-width: 768px) {
 	.navbar-inverse .nav-tabs.nav-justified > li > a,
 	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
 	.social { float: right!important; height: 106px; padding-top: 50px; }
 	.logo { float: left!important; }
+
+	/* Forms */
+	.field, .btn-group-lg { width: 600px; }
 }

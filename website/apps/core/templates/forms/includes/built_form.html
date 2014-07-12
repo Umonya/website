@@ -9,5 +9,5 @@
     {% for field in form_for_form %}
         {% include "core/includes/field.html" with translate=True %}
     {% endfor %}
-    <input type="submit" value="{% trans form.button_text %}">
+    <div class="btn-group-lg"><input type="submit" value="{% trans form.button_text %}" class="btn btn-default"></div>
 </form>

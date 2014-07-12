@@ -12,7 +12,7 @@
 		{% for field in form %}
 			{% include "core/includes/field.html" %}
 		{% endfor %}
-		<div><input type="submit" value={% trans "Submit" %}></div>
+		<div class="btn-group-lg"><input type="submit" value="{% trans "Submit" %}" class="btn btn-default"></div>
 	</form>
 </div>
 {% endblock %}

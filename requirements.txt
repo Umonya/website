@@ -4,6 +4,7 @@ django-ckeditor==4.0.2
 django-forms-builder==0.8.5
 django-preferences==0.0.6
 django-toolbelt==0.0.1
+django-widget-tweaks==1.3
 dj-database-url==0.2.2
 dj-static==0.0.5
 gunicorn==18.0
