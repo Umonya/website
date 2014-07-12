@@ -1,5 +1,8 @@
 {% extends "core/base.html" %}
 {% load forms_builder_tags i18n %}
+
+{% block title %}{{ form.title }}{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1>{% trans form.title %}</h1>
