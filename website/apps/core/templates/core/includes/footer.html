@@ -1,4 +1,9 @@
-{% load i18n %}
+{% load i18n staticfiles %}
+
 <div class="container">
 	<p class="text-center">{% with simeon_url="https://twitter.com/simeontsvetkov" %}{% blocktrans %}A big thank you to <a href="{{ simeon_url }}">Simeon Tsvetkov</a> for our amazing logo design.{% endblocktrans %}{% endwith %}</p>
+	<div>
+		<a href="https://github.com/Umonya" class="github"><img alt="Umonya on Github" src="{% static 'images/github-mark-small.png' %}" width="32" height="32">{% trans "Umonya on Github" %}</a>
+		<a href="http://djangopony.com/" class="ponybadge" title="Magic! Ponies! Django! Whee!"><img src="http://media.djangopony.com/img/small/badge.png" width="210" height="65" alt="pony powered"></a>
+	</div>
 </div>
