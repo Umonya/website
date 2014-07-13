@@ -1,5 +1,8 @@
 {% extends "core/base.html" %}
 {% load forms_builder_tags %}
+
+{% block title %}{{ form.title }}{% endblock %}
+
 {% block content %}
 <div class="container">
     {% render_built_form form %}

@@ -1,35 +1,82 @@
+html,
 body {
-	font: normal 13px/1.8em Arial, Helvetica, sans-serif;
-	color: #333;
+    height: 100%;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	margin: 0;
-	padding: 10px 0;
-	font-weight: normal;
-	color: #000;
-	font-family: 'Rationale', Arial, Helvetica, sans-serif;
+/* Footer-related */
+#pagewrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -196px;
 }
 
-#header, #nav, #footer {
-	color: white;
+#push,
+#footer {
+	height: 196px;
 }
 
-#header, #footer {
+#footer div p { padding: 32px 0 0 0; }
+#footer div div { text-align: center; margin-top: 32px; }
+#footer div div > a { padding-top: 20px; display: inline-block; height: 65px; width: 20%; vertical-align: middle;}
+#footer .ponybadge { padding-top: 0; }
+#footer .github img { padding: 6px 8px 7px 0;  height: 45px; width: 40px; }
+/* END Footer-related */
+
+#header {
+	padding: 40px 0 29px;
+}
+
+#content { margin-bottom: 48px; }
+
+.dark {
 	background-color: rgb(48, 48, 48);
-	padding: 32px 32px;
-	text-align:center;
+	color: rgb(119, 119, 119);
 }
 
-#header .logo { float: left; }
-#header .social { float: right; }
-#header .logo img { width: 495px; }
-#header .social img { width: 56px; height: 56px; }
+.social { padding-top: 29px; }
 
-#nav {
-	background-color: rgb(32, 32, 32);
+/* Navbar */
+.navbar { border-radius: 0; }
+.nav li,
+.btn-group-lg .btn {
+	font-family: 'Rationale', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
-#nav li {
-	font-size: large;
+/* Forms */
+.field, .btn-group-lg { margin-bottom: 16px; width: 100%; }
+.btn-group-lg .btn { min-width: 196px; margin: 16px auto; }
+.field .help-text { font-style: italic; color: #777; font-size: small; }
+form { margin: 32px auto; }
+.booleanfield.form-control { width: 24px; height: 24px; margin: 5px 0; }
+.input-group-addon {
+	font-weight: bold;
+	color: rgb(51, 51, 51);
+	background-color: #fff;
+	display: inline-block;
+	line-height: inherit;
+	width: auto;
+	border: none;
+}
+/* Form errors */
+.error { border-color: red; }
+.errorlist { 
+	color: red;
+	font-style: italic;
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.navbar-inverse .nav-tabs.nav-justified > li > a,
+	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
+	.social { float: right!important; height: 106px; padding-top: 50px; }
+	.logo { float: left!important; }
+
+	/* Forms */
+	.field, .btn-group-lg { width: 600px; }
 }

@@ -1,19 +1,31 @@
-{% load i18n %}
+{% load i18n widget_tweaks %}
 {% if field.is_hidden %}{{ field }}{% else %}
-<div class="field">
-	{% if translate %}
-		{% if field.label %}
-		<label for="{{ field.auto_id }}">{% trans field.label %}{% if field.field.required %} *{% endif %}</label>
+	{% with WIDGET_ERROR_CLASS='error' WIDGET_REQUIRED_CLASS='required' %}
+	<div class="field input-group">
+		{% if translate %}
+			{% if field|widget_type == 'checkboxinput' %}
+				{% render_field field class+="form-control" %}
+				<label for="{{ field.auto_id }}" class="input-group-addon">{% trans field.label %}{% if field.field.required %} *{% endif %}</label>
+			{% else %}
+				{% if field.label %}
+				<label for="{{ field.auto_id }}">{% trans field.label %}{% if field.field.required %} *{% endif %}</label>
+				{% endif %}
+				{% render_field field class+="form-control" %}
+			{% endif %}
+			{% if field.help_text %}<div class="help-text">{% trans field.help_text %}</div>{% endif %}
+		{% else %}
+			{% if field|widget_type == 'checkboxinput' %}
+				{% render_field field class+="form-control" %}
+				<label for="{{ field.auto_id }}" class="input-group-addon">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+			{% else %}
+				{% if field.label %}
+				<label for="{{ field.auto_id }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+				{% endif %}
+				{% render_field field class+="form-control" %}
+			{% endif %}
+			{% if field.help_text %}<div class="help-text">{{ field.help_text }}</div>{% endif %}
 		{% endif %}
-		{{ field }}
-		{% if field.help_text %}<div class="help-text">{% trans field.help_text %}</div>{% endif %}
-	{% else %}
-		{% if field.label %}
-		<label for="{{ field.auto_id }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
-		{% endif %}
-		{{ field }}
-		{% if field.help_text %}<div class="help-text">{{ field.help_text }}</div>{% endif %}
-	{% endif %}
-	{{ field.errors }}
-</div>
+		{{ field.errors }}
+	</div>
+	{% endwith %}
 {% endif %}

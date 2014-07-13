@@ -2,17 +2,22 @@
 
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+	<link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
-	<link href="http{% if request.is_secure %}s{% endif %}://fonts.googleapis.com/css?family=Rationale" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Rationale" rel="stylesheet" type="text/css">
 	<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon">
+	<link href="//fonts.googleapis.com/css?family=Rationale" rel="stylesheet" type="text/css">
+	<title>{% block title %}{% endblock %} | Umonya</title>
 </head>
 <body>
-	<div id="header">{% block header %}{% include "core/includes/header.html" %}{% endblock %}</div>
-	<div id="nav">{% block nav %}{% include "core/includes/nav.html" %}{% endblock %}</div>
-	<div id="content">{% block content %}{% endblock %}</div>
-	<div id="footer">{% block footer %}{% include "core/includes/footer.html" %}{% endblock %}</div>
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<div id="pagewrapper">
+		<div id="header" class="dark">{% block header %}{% include "core/includes/header.html" %}{% endblock %}</div>
+		<div id="nav">{% block nav %}{% include "core/includes/nav.html" %}{% endblock %}</div>
+		<div id="content">{% block content %}{% endblock %}</div>
+		<div id="push"></div>
+	</div>
+	<div id="footer" class="dark">{% block footer %}{% include "core/includes/footer.html" %}{% endblock %}</div>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

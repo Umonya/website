@@ -1,6 +1,8 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 
+{% block title %}Contact Us{% endblock %}
+
 {% block content %}
 <div class="container">
 	<h1>{% trans "Contact Us" %}</h1>
@@ -10,7 +12,7 @@
 		{% for field in form %}
 			{% include "core/includes/field.html" %}
 		{% endfor %}
-		<div><input type="submit" value={% trans "Submit" %}></div>
+		<div class="btn-group-lg"><input type="submit" value="{% trans "Submit" %}" class="btn btn-default"></div>
 	</form>
 </div>
 {% endblock %}
