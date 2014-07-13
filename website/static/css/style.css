@@ -3,11 +3,6 @@ body {
     height: 100%;
 }
 
-h1, h2, h3,
-.nav li {
-	font-family: 'Rationale', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
 /* Footer-related */
 #pagewrapper {
     min-height: 100%;
@@ -43,11 +38,17 @@ h1, h2, h3,
 
 /* Navbar */
 .navbar { border-radius: 0; }
-.nav li { font-size: 24px; text-transform: uppercase; font-weight: bold; }
+.nav li,
+.btn-group-lg .btn {
+	font-family: 'Rationale', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px; 
+	text-transform: uppercase;
+	font-weight: bold;
+}
 
 /* Forms */
 .field, .btn-group-lg { margin-bottom: 16px; width: 100%; }
-.btn-group-lg .btn { min-width: 256px; margin: 16px auto; }
+.btn-group-lg .btn { min-width: 196px; margin: 16px auto; }
 .field .help-text { font-style: italic; color: #777; font-size: small; }
 form { margin: 32px auto; }
 .booleanfield.form-control { width: 24px; height: 24px; margin: 5px 0; }
