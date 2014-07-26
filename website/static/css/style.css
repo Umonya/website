@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 /* Footer-related */
@@ -40,8 +41,8 @@ body {
 .navbar { border-radius: 0; }
 .nav li,
 .btn-group-lg .btn {
-	font-family: 'Rationale', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
