@@ -1,0 +1,142 @@
+[
+    {
+        "pk": 1, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2012-07-24T05:51:24Z", 
+            "description": null, 
+            "created": "2012-07-24T05:51:24Z", 
+            "creator": 1, 
+            "modified": "2013-07-21T07:36:17Z", 
+            "content": "<p><span lang=\"EN-ZA\">Umonya is a non-profit organisation that aims to help introduce school children to programming.\u00a0Information Technology is still not a widely taught school subject in South Africa,\u00a0which means the majority of learners are never exposed to programming and, in turn, never have the chance to become interested in the subject. Umonya holds weekend-long courses multiple times a year which cover basic programming concepts and aim to give students the\u00a0tools to pursue programming in their own time, outside of a conventional classroom environment.</span></p>\n<h2>Who do we teach?</h2>\n<p><span lang=\"EN-ZA\">Registration is open to any learner between the ages of 12 and 18, the only requirements are a bit of curiosity and the willingness to learn.</span></p>\n<h2>What do we teach?</h2>\n<p><span lang=\"EN-ZA\">Python! Basic programming topics are covered using the Python language. Python is simple, syntactically light, emphasises explicit over implicit usage (which is great when learning something for the first time). But most of all, it\u2019s fun!</span></p>\n<h2>Who teaches?</h2>\n<p><span lang=\"EN-ZA\">Umonya courses are run thanks to the support of a group of volunteers, ranging from students to seasoned IT professionals, all from within the Cape Town tech community. If you're interested in getting involved, send us an <a href=\"mailto:nina@umonya.com\">email</a>!</span></p>", 
+            "published": true, 
+            "title": "About Us"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2012-10-09T12:46:27Z", 
+            "description": null, 
+            "created": "2012-10-09T12:46:27Z", 
+            "creator": 1, 
+            "modified": "2012-10-09T12:46:27Z", 
+            "content": "<p>We're all super excited about the course this weekend! <strong>Please take note that the venue is now set for UCT.</strong></p>\n<p>Please contact us if you have any inquiries about the weekend. Otherwise, see you there!</p>", 
+            "published": true, 
+            "title": "UCT confirmed as venue!"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2012-08-25T20:59:59Z", 
+            "description": null, 
+            "created": "2012-08-25T20:59:59Z", 
+            "creator": 1, 
+            "modified": "2012-08-25T21:01:08Z", 
+            "content": "<p>Umonya is an official partner of PyconZa (<a href=\"http://za.pycon.org/\" target=\"_blank\">http://za.pycon.org/</a>) and has tickets available for Students to attend the conference.<br /><br />This is an exciting opportunity as the conference will offer a wide variety of talks for everyone from novice to expert.\u00a0<br />Umonya students will be accompanied by a mentor who will at all times be available for questions and guidance, so there will be no need for students to ever feel overwhelmed.\u00a0<br /><br />If you are interested, <a href=\"index.php/registration\" target=\"_self\" title=\"Course Registration\">sign up</a> for our course happening on 12 - 14 October and tell us you are also interested in the conference.</p>", 
+            "published": true, 
+            "title": "Umonya and PyconZA!"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2012-07-24T06:03:26Z", 
+            "description": null, 
+            "created": "2012-07-24T06:03:26Z", 
+            "creator": 1, 
+            "modified": "2012-07-27T20:15:36Z", 
+            "content": "<p>Umonya will be having a course on 12-14 October 2012 where we will teach 100 High School children how to program in Python.\u00a0It will be taking place during Cape Town's first ever Software week (<a href=\"http://www.softwareweek.co.za\" target=\"_blank\">http://www.softwareweek.co.za</a>)</p>\n<p>In association with <a href=\"http://www.siliconcape.com\" target=\"_blank\">Silicon Cape</a> and <a href=\"http://www.cput.ac.za\" target=\"_blank\">Cape Peninsula University of Technology</a>.</p>\n<p>Applications for the course can be submitted <a href=\"index.php/registration\">here</a>.<br />If you would like to get involved, please <a href=\"index.php/contactus\" target=\"_self\">contact us</a>.</p>", 
+            "published": true, 
+            "title": "Upcoming Course in October!"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-01-15T21:04:14Z", 
+            "description": null, 
+            "created": "2013-01-15T21:04:14Z", 
+            "creator": 1, 
+            "modified": "2013-07-19T09:11:36Z", 
+            "content": "<p><iframe src=\"https://docs.google.com/spreadsheet/embeddedform?formkey=dElIYTQxR3BFeTRUVEZtUUdnMnNfdWc6MA\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"760\" height=\"2234\">Loading...</iframe></p>", 
+            "published": true, 
+            "title": "Register Here!"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-01-16T13:40:35Z", 
+            "description": null, 
+            "created": "2013-01-16T13:40:35Z", 
+            "creator": 1, 
+            "modified": "2013-01-16T13:41:06Z", 
+            "content": "<p>Umonya's second 3 day event is on the horizon. We will be hosting 50 High School children who are keen to learn to code. It will be taking place towards the end of March, although exact dates are yet to be finalized.<br /> <br />Our first event was a great success and we are looking forward to an even better one this year. Read about our last event <a href=\"http://blog.umonya.org/umonyas-first-event-a-great-success/\" target=\"_blank\">here</a>.<br /><br />Applications for the course can be submitted <a href=\"http://www.umonya.org/index.php/register-here\">here</a>.<br /> If you would like to get involved in any other way, please <a href=\"http://www.umonya.org/index.php/contactus\">contact us</a>.</p>", 
+            "published": true, 
+            "title": "Upcoming Course in March!"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-01-31T09:04:44Z", 
+            "description": null, 
+            "created": "2013-01-31T09:04:44Z", 
+            "creator": 1, 
+            "modified": "2013-01-31T09:09:06Z", 
+            "content": "<p>The new dates for the upcoming Umonya event are now set for 5-7 April. Spread the word and if you haven't yet, register now!</p>\n<p>If you would like to stay up to date on everything Umonya, follow us on Twitter, Facebook and Google+</p>", 
+            "published": true, 
+            "title": "IMPORTANT: New Dates!"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-03-28T08:58:31Z", 
+            "description": null, 
+            "created": "2013-03-28T08:58:31Z", 
+            "creator": 1, 
+            "modified": "2013-03-28T08:58:31Z", 
+            "content": "<p>We're all set for next weekend's course. The venue is confirmed as Abbotts College in Century City.</p>\n<p>We have sent out several emails to all applicants. If you haven't received anything, please let us know. info@umonya.com</p>\n<p>We hope you're all as excited as we are. See you there!</p>", 
+            "published": true, 
+            "title": "April course all set!"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-06-26T09:45:35Z", 
+            "description": null, 
+            "created": "2013-06-26T09:45:35Z", 
+            "creator": 1, 
+            "modified": "2013-06-26T09:45:35Z", 
+            "content": "<p>We apologise for being so silent for the last while. We have been busy with some exciting new projects within Umonya that have taken up our time.</p>\n<p><br />Our next event is well into the pipeline, though we are not yet able to confirm a date. It is, however, likely to be sometime in August. Start spreading the word, we'll be opening registrations later today. Check back soon!</p>\n<p>In the meantime, if you haven't yet, read about our previous events and other cool things on our <a href=\"http://blog.umonya.org\" target=\"_blank\" title=\"Umonya Blog\">blog</a>.</p>\n<p><br />Kind regards<br />The Umonya Team</p>", 
+            "published": true, 
+            "title": "Time for an update!"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "posts.post", 
+        "fields": {
+            "published_on": "2013-07-19T10:03:06Z", 
+            "description": null, 
+            "created": "2013-07-19T09:22:19Z", 
+            "creator": 1, 
+            "modified": "2013-07-19T10:03:06Z", 
+            "content": "<p>Registrations are now open for Umonya's next weekend Python course. The event will be taking place on 20, 21 and 22 September at Abbott's College in century city. <a href=\"index.php/register-here\">Register here!</a></p>\n<p>If you're at all interested in helping out then please get in <a href=\"index.php/contactus\">contact</a>.</p>\n<p>We're very excited about this course. We've taken past courses into account and reworked and refined the course even more.</p>\n<p>Join us for a weekend of fun! If you've attended a course in the past then spread the word and give others the chance to step into the world of computer programming!</p>", 
+            "published": true, 
+            "title": "September Course!"
+        }
+    }
+]
