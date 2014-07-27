@@ -28,6 +28,17 @@ body {
 	padding: 40px 0 29px;
 }
 
+#header, #nav, #footer {
+	background: url('/static/images/header-bg.png') 0 0 repeat;
+}
+
+#nav .navbar-inverse {
+	background: url('/static/images/header-inv.png') 0 0 repeat-x;
+	height: 53px;
+}
+
+.logo a > img { width: 100%; }
+
 #content { margin-bottom: 48px; }
 
 .dark {
@@ -75,8 +86,9 @@ form { margin: 32px auto; }
 @media (min-width: 768px) {
 	.navbar-inverse .nav-tabs.nav-justified > li > a,
 	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
-	.social { float: right!important; height: 106px; padding-top: 50px; }
+	.social { float: right!important; height: 106px; padding: 0; }
 	.logo { float: left!important; }
+	.logo a > img { width: auto; }
 
 	/* Forms */
 	.field, .btn-group-lg { width: 600px; }
