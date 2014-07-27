@@ -32,11 +32,6 @@ body {
 	background: url('/static/images/header-bg.png') 0 0 repeat;
 }
 
-#nav .navbar-inverse {
-	background: url('/static/images/header-inv.png') 0 0 repeat-x;
-	height: 53px;
-}
-
 .logo a > img { width: 100%; }
 
 #content { margin-bottom: 48px; }
@@ -86,6 +81,10 @@ form { margin: 32px auto; }
 @media (min-width: 768px) {
 	.navbar-inverse .nav-tabs.nav-justified > li > a,
 	.navbar-inverse .nav-tabs.nav-justified > .active > a { border-bottom-width: 0; }
+	#nav .navbar-inverse {
+		background: url('/static/images/header-inv.png') 0 0 repeat-x;
+		height: 53px;
+	}
 	.social { float: right!important; height: 106px; padding: 0; }
 	.logo { float: left!important; }
 	.logo a > img { width: auto; }
