@@ -63,6 +63,12 @@ class GeneralPreferences(Preferences):
         verbose_name='twitter URL',
         help_text="Leave blank if you don't have a Twitter account."
     )
+    blog_url = models.URLField(
+        null=True,
+        blank=True,
+        verbose_name='blog URL',
+        help_text="Leave blank if you don't have a blog."
+    )
 
     class Meta:
         verbose_name_plural = 'general preferences'
